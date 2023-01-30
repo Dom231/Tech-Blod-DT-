@@ -9,41 +9,28 @@
         </div>
         {{/each}}
     </div>
- <div class='add-dish-container'>
+ <div class='add-post-container'>
     <h2>
-      RSVP with the dish you plan to bring!
+      Add a post
     </h2>
-    <form class='new-dish-form'>
-      <label for='dish_name'>
-        Dish Name:
+    <form class='new-post-form'>
+      <label for='title'>
+        Title:
       </label>
       <br />
-      <textarea id='dish_name' name='dish_name' rows='2' cols='30'>
-        {{dish_name}}
+      <textarea id='title' name='title' rows='2' cols='30'>
+        {{title}}
       </textarea>
       <br />
-      <label for='description'>
-        Description:
+      <label for='post'>
+        Post Content:
       </label>
       <br />
-      <textarea id='description' name='description' rows='5' cols='30'>
-        {{description}}
+      <textarea id='post' name='post' rows='5' cols='30'>
+        {{post}}
       </textarea>
       <br />
-      <label for='guest_name'>
-        Guest Name:
-      </label>
-      <br />
-      <textarea id='guest_name' name='guest_name' rows='2' cols='30'>
-        {{guest_name}}
-      </textarea>
-      <br />
-      <br />
-      <input type='checkbox' id='has_nuts' name='has_nuts' value='true' />
-      <label for='has_nuts'>
-        Check box if this dish contains nuts
-      </label>
-      <br />
+     
       <button type='submit' value='Submit'>
         Submit
       </button>
@@ -52,4 +39,4 @@
 
 </div>
 
-<script src='14-MVC\02-Challenge\Tech-Blod-DT-\public\js\add-post.js'> </script>
+<script src='/js/add-post.js'> </script>

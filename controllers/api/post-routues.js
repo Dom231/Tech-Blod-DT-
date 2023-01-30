@@ -33,8 +33,11 @@ const {Post} = require('../../models');
 
  router.post('/', async (req,res)=>{
     try {
-        const TData = await Category.create(req.body);
-        res.status(200).json(TData);
+        const postData = await Post.create({
+            title: req.body.title,
+            post: req.body.post
+        });
+        res.status(200).json(postData);
       } catch (err) {
         res.status(400).json(err);
       }
