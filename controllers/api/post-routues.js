@@ -25,7 +25,7 @@ const {Post} = require('../../models');
         const post = postData.get({ plain: true });
         console.log(post);
         // Then, the 'dish' template is rendered and dish is passed into the template.
-        res.render('allpost', post);
+        res.render('homepage', post);
         } catch (err) {
             res.status(500).json(err);
         }
