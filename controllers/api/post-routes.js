@@ -1,7 +1,19 @@
 const router = require('express').Router();
 const {Post} = require('../../models');
 
- router.get('/:id', async (req,res)=>{
+router.get('/submitPost', async (req, res) => {
+    try {
+        
+       
+   res.render('submit');
+   
+   
+   
+    } catch(err) {
+        res.status(500).json(err);
+    }
+}); 
+router.get('/:id', async (req,res)=>{
     try {
         // Search the database for a dish with an id that matches params
         const postData = await Post.findByPk(req.params.id);
@@ -45,6 +57,8 @@ const {Post} = require('../../models');
         res.status(400).json(err);
       }
  })
+
+ 
 
 
  module.exports = router;

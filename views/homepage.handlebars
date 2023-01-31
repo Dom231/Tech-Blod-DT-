@@ -1,42 +1,16 @@
-<div>
-    <div>
+<div class="card-deck" style="width:70rem; margin-left: 20px; align-items: center; ">
+    <div class="card" style="width:80rem;">
         <h2>All posts</h2>
         {{#each post}}
-        <div dish col-md-5>
+        <div class = "card-body" style="background-color:rgba(13, 16, 86, 0.789);
+  border-style:solid;">
             <p>
-               <a href='post/{{id}}'>{{title}}</a> 
+               <a href='post/{{id}}' style="color:antiquewhite">{{title}}</a> 
             </p>
         </div>
         {{/each}}
     </div>
- <div class='add-post-container'>
-    <h2>
-      Add a post
-    </h2>
-    <form class='new-post-form'>
-      <label for='title'>
-        Title:
-      </label>
-      <br />
-      <textarea id='title' name='title' rows='2' cols='30'>
-        {{title}}
-      </textarea>
-      <br />
-      <label for='post'>
-        Post Content:
-      </label>
-      <br />
-      <textarea id='post' name='post' rows='5' cols='30'>
-        {{post}}
-      </textarea>
-      <br />
-     
-      <button type='submit' value='submit'>
-        Submit
-      </button>
-    </form>
-  </div>
+ 
 
 </div>
 
-<script src='/js/add-post.js'> </script>

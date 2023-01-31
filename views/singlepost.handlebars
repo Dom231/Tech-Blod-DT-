@@ -1,8 +1,9 @@
-<div>
-    <div>
+<div >
+    <div class="card" >
         <h2>All posts</h2>
        
-        <div>
+        <div class = "card-body" style="background-color:rgba(120, 122, 179, 0.789);
+  border-style:solid;">
             <p>
                 <ul> {{title}}</ul>
                 <ul> {{post}}</ul>
@@ -11,4 +12,28 @@
         </div>
        
     </div>
+    <div class='add-comment-container'>
+    <h2>
+      Add a comment
+    </h2>
+    <form class='new-comment-form'>
+      <label for='comment'>
+        Comment Content:
+      </label>
+      <br />
+      <textarea id='comment' name='comment' rows='5' cols='30'>
+        {{comment}}
+      </textarea>
+      <br />
+     
+      <button type='submit' value='submit'>
+        Submit
+      </button>
+    </form>
+   
+  </div>
+
+  
 </div>
+
+<script src='/js/add-comment.js'> </script>
