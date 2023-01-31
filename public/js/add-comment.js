@@ -1,6 +1,8 @@
 async function newFormHandler(event) {
   event.preventDefault();
   const comment = document.querySelector('#comment').value;
+  const post_id = window.location.toString().split('/')[5];
+  console.log(post_id)
   ;
   
   // Send fetch request to add a new dish
@@ -8,6 +10,8 @@ async function newFormHandler(event) {
     method: 'POST',
     body: JSON.stringify({
      comment,
+     post_id,
+     
     }),
     headers: {
       'Content-Type': 'application/json',
@@ -15,7 +19,7 @@ async function newFormHandler(event) {
   });
   //if the dish is added, the 'all' template will be rerendered
   if (response.ok) {
-    document.location.replace('/api/comment/');
+    document.location.reload();
   } else {
     alert('Failed to add comment');
   }

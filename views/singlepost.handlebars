@@ -7,6 +7,7 @@
             <p>
                 
                 <ul> {{post}}</ul>
+               
 
             </p>
         </div>
@@ -31,7 +32,18 @@
       </button>
     </form>
    
-  </div>
+  </div class = "card">
+
+  <div>
+     {{#each comments}}
+     <div class = "card-body" style="background-color:rgba(120, 122, 179, 0.789);
+  border-style:solid;">
+                <ul>{{comment}}</ul>
+             </div>   
+                {{/each}}
+</div>
+              
+  
 
   
 </div>
