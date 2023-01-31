@@ -17,13 +17,13 @@ Comment.init(
         allownull:false,
 
      },
-     user_id:{
-        type: DataTypes.INTEGER, 
-          references: {
-            model:'user', 
-            key: 'id', 
-          },
-       } ,
+    //  user_id:{
+    //     type: DataTypes.INTEGER, 
+    //       references: {
+    //         model:'user', 
+    //         key: 'id', 
+    //       },
+      //  } ,
      post_id:{
       type: DataTypes.INTEGER, 
         references: {

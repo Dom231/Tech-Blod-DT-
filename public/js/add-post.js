@@ -3,8 +3,7 @@ async function newFormHandler(event) {
   const title = document.querySelector('#title').value;
   const post = document.querySelector('#post').value;
   ;
-  // The following is a ternary operator. It checks to see if has_nuts is checked. If it is, it will return true, otherwise, it will return false.
-
+  
   // Send fetch request to add a new dish
   const response = await fetch(`/api/post`, {
     method: 'POST',
@@ -18,7 +17,7 @@ async function newFormHandler(event) {
   });
   //if the dish is added, the 'all' template will be rerendered
   if (response.ok) {
-    document.location.replace('/');
+    document.location.replace('/api/post');
   } else {
     alert('Failed to add post');
   }
