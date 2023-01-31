@@ -17,7 +17,7 @@ async function newFormHandler(event) {
   });
   //if the dish is added, the 'all' template will be rerendered
   if (response.ok) {
-    document.location.replace('/api/post');
+    document.location.replace('/');
   } else {
     alert('Failed to add post');
   }

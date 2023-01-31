@@ -3,9 +3,10 @@
         <h2>All posts</h2>
         {{#each post}}
         <div class = "card-body" style="background-color:rgba(13, 16, 86, 0.789);
-  border-style:solid;">
+  border-style:solid; color:antiquewhite;">
             <p>
                <a href='api/post/{{id}}' style="color:antiquewhite">{{title}}</a> 
+               <ul>Posted On: {{post_date}}</ul>
             </p>
         </div>
         {{/each}}

@@ -16,7 +16,7 @@ router.get('/submitPost', async (req, res) => {
 router.get('/:id', async (req,res)=>{
     try {
         // Search the database for a dish with an id that matches params
-    const postData = await Post.findByPk(req.params.id, {include : {model: Comment, attributes:['id','comment','post_id']} });
+    const postData = await Post.findByPk(req.params.id, {include : {model: Comment, attributes:['id','comment','comment_date','post_id']} });
         console.log(postData)
         // We use .get({ plain: true }) on the object to serialize it so that it only includes the data that we need. 
         const post = postData.get({ plain: true });
