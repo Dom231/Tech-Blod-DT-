@@ -2,9 +2,9 @@
     <div>
         <h2>All posts</h2>
         {{#each post}}
-        <div>
+        <div dish col-md-5>
             <p>
-                {{post}}
+               <a href='post/{{id}}'>{{title}}</a> 
             </p>
         </div>
         {{/each}}
@@ -31,7 +31,7 @@
       </textarea>
       <br />
      
-      <button type='submit' value='Submit'>
+      <button type='submit' value='submit'>
         Submit
       </button>
     </form>

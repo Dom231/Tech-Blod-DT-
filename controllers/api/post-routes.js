@@ -22,10 +22,12 @@ const {Post} = require('../../models');
         const postData = await Post.findAll();
         console.log(postData)
         // We use .get({ plain: true }) on the object to serialize it so that it only includes the data that we need. 
-        const post = postData.get({ plain: true });
+        const post = postData.map((gallery) => 
+        gallery.get({ plain: true })
+           );
         console.log(post);
         // Then, the 'dish' template is rendered and dish is passed into the template.
-        res.render('homepage', post);
+        res.render('homepage', {post});
         } catch (err) {
             res.status(500).json(err);
         }
@@ -35,7 +37,8 @@ const {Post} = require('../../models');
     try {
         const postData = await Post.create({
             title: req.body.title,
-            post: req.body.post
+            post: req.body.post,
+            // user_id: req.body.user_id
         });
         res.status(200).json(postData);
       } catch (err) {
