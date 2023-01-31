@@ -1,11 +1,11 @@
 <div class="card-deck" style="width:70rem; margin-left: 20px; align-items: center; ">
-    <div class="card" style="width:80rem;">
+    <div class="card" style="width:80rem;background-color:rgba(91, 94, 199, 0.789)">
         <h2>All posts</h2>
         {{#each post}}
         <div class = "card-body" style="background-color:rgba(13, 16, 86, 0.789);
   border-style:solid;">
             <p>
-               <a href='post/{{id}}' style="color:antiquewhite">{{title}}</a> 
+               <a href='api/post/{{id}}' style="color:antiquewhite">{{title}}</a> 
             </p>
         </div>
         {{/each}}
